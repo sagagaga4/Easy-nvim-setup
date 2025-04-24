@@ -83,6 +83,8 @@ require("lazy").setup({
       vim.cmd('colorscheme rose-pine')
     end,
   },
+    
+    { "LunarVim/tampleos.nvim", name = "tampleos" },
     { "EdenEast/nightfox.nvim" },
     { "dracula/vim", name = "dracula" },
     { "shaunsingh/nord.nvim" },
@@ -242,7 +244,7 @@ require("lazy").setup({
                 }
             })
             require("lspconfig").clangd.setup {
-                capabilities = require("cmp_nvim_lsp").default_capabilities(),
+                capabilities = require("cmp_vim_lsp").default_capabilities(),
             }
         end
     }
@@ -258,4 +260,4 @@ vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "black", fg = "gray" })  -- Adjust
 -- Set colorscheme (choose one)
 vim.cmd("colorscheme rose-pine") -- change this line to any of the colorschemes you prefer
 
--- End of init.lua
+-- End of init.luan
